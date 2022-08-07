@@ -1,0 +1,454 @@
+=======================
+     2022/08/07
+=======================
+
+* Repository: https://github.com/Evolution-X/frameworks_base/commits/refs/heads/snow
+
+9ed0bde63e06 Revert "Battery: Color coded battery indication for Landscape icons"
+4ade2dffe061 fb:increase blur radius * old looks odly weird it
+e76173494873 Battery: Color coded battery indication for Landscape icons
+ecc9028419fc SystemUI: blur auth dialog background
+e15141fbf093 Revert "Fix brightness slider curve for some devices"
+e6e654eece63 base: Remove keyguard delay completely
+5a6a26891628 Use accent color for privacy indicators
+17aaddf23421 Keyguard: Apply color accent to shorcuts
+80229faa8c0b Keyguard shortcuts: Follow light/dark settings
+9d1e1c35ba7e Redesign lockscreen bottom shortcuts
+789b95a20d96 SystemUI: Set proper margin and padding for lockscreen bottom shortcuts
+f21b477763a0 Battery: make fill path rounded
+3ba28d03a61e StrictStandby: Offload force stop onto lock-free context
+1249be40b48f SystemUI: Drop LS custom clocks
+a71e92a697fc SystemUI: Add seekbar for Left/Right statusbar Paddings [1/2]
+d99ff31d7563 Properly handle View Visibility for carrierlabel & left clock
+c3ab7c0aff28 Carrier Label: Bring back the scroll (marquee) effect
+5fba4d7b0be3 Notch friendly carrier label [1/2]
+a2317b2cafb0 Custom Carrier Label & Carrier Label Placement [1/2]
+619f2736b589 SystemUI: LS Hide Shortcut must hide all shortcuts not just defaults
+11d9659b2351 base: allow hiding lockscreen shortcuts on secure lockscreen [1/2]
+7c2b637c8d3a SystemUI: Add dual-tone light and dark themes for QS
+db7d202c08a6 SystemUI: Initialize QS tiles in inactive state
+7b42291f5d2f SystemUI: Follow light/dark theme in quick settings
+a8c00ca0b9df Revert "Do not re-inflate QS and SB when CONFIG_UI_MODE"
+0e1ea1899024 SystemUI: Make QS panel change on UI mode changes
+8df3587c58f7 Volume Panel: Fix spacing and media output picker view
+a438f01ad19c SystemUI: Move ringer drawer above volume rows
+98fec4ef0d28 SystemUI: Improve Per-app volume icon view
+603c9b2bcd88 SystemUI: Improve live captions button style
+10d42f2ff336 SystemUI: Improve volumepanel buttons style
+8063e5ce2428 SystemUI: Volume panel layout changes
+11bde2885865 SystemUI: Redesign Volume Panel the 404 way
+a7bf5984b9d1 VolumePanel: Improve volume panel percent view
+863e998661ac VolumePanel: Fix expand animation for left volume panel
+a0249c4bfacb VolumePanel: Design changes
+16634f59e997 base: Allow customizing volume dialog timeout [1/2]
+28c0f818f6b4 Open Sound settings on long click at the panel button
+bb67aaed09f6 VolumeDialog: Clean up unused dynamic in addRow
+58803dd8d6ce SystemUI: Remove shadows from elements like clock, charging etc on lockscreen. It doesn't fit well and makes clock font look distorted.
+e91117ae7a21 base: Introduce force background freezer
+d79b16829ba6 base: Add support for strict standby policy
+d4aeba6ccfb2 SystemUI: use AndroidSystemBlur-platform
+9e288e11ad0f SystemUI: blur brightness slider dialog
+5b61a40e582a GlobalActionsDialogLite: disable SystemUIDialog provided blur
+62cc4ad63910 SystemUIDialog: allow disabling background blur
+0bb0a0c3aeec DndTile: disable dialog animation
+dbd5e591783d DataSaverTile: disable dialog animation
+7262870425ad MediaControlPanel: disable dialog animation
+40a8b9c01257 MediaOutputController: disable dialog animation
+7ef97be255c7 UserSwitchDialogController: disable dialog animation
+6a808d70137c SystemUIDialog: blur background
+344708f3baa6 ScreenRecordTile: disable dialog animation
+a514eea605eb InternetTile: disable dialog animation
+ce5327544686 FooterActionsController: disable power menu animation
+4229cd57be99 SystemUI: blur privacy dialog
+aa25e9af1bca SystemUI: blur global actions dialog
+01bfad3621fc SystemUI: blur toast
+c8bd13043e88 SystemUI: Add AndroidSystemBlur dependency
+4ef3096316cd PixelPropsUtils: Fix HDR support spoof
+49288da66cbf fwb: Bring in the new icon
+b4bac64883d6 keyguard: make disabling of fingerprint wake-and-unlock runtime configurable [1/2]
+80a416da36a5 Force Expanded Notifications [1/2]
+a3a732c0d88f Move binder latency data logging to a background thread to improve performance of the main thread.
+8c5dc02c43f6 Fix the wrong of dismisssurface state under multi-threading
+c5c0bf8c535c EasterEgg: Fix some warnings
+85dd09bc6133 Handle BLE ON corner use cases with BLE APP concurrency
+763daa3765e6 Fix StageCoordinator unexpected onDisplayAreaVanished
+f4a160f7e14b base: HUN importance selector (1/2)
+0c5e2c027a26 Properly handle wrap system property in zygote
+10c3a1c03806 Correct off-by-one error in SetThreadName
+b4784bdb5a63 Revert "Revert "Separate mute and vibrate icons in status bar""
+541749d76142 SystemUI: Implement SparkCircle Clock
+fa7c273f43c1 Custom Clocks: Adapt for 12L
+ce302a2c1e4e SystemUI: Fix smartspace weather layout
+e711acff40dd Implement Spark Ls Clock Style
+2e3fc86fd1b6 Further Improve the Clock impl
+92914e22c053 Introduce Custom Clock Support
+80ca4af6a351 TouchGestures: Add keyhandler overlays
+b90b45e75b16 base: Show USB icon in ADB notification
+68e344d85e85 Fix brightness slider curve for some devices
+ad98f60beb6b Add bootloader option to 'Reboot' tile
+ce967c3866e6 AppErrorDialog: add option to disable pkg
+60a820e4061b LockscreenShortcuts: enable default shortcuts
+a9f08fde7b1c core: Update GPS Icons to be more Material
+aa0196cfccf7 SystemUI: Dismiss existing screenshot window on taking new screenshot
+d0ec0138c2cb SystemUI: Dismiss screenshot window on touch outside
+6d6af8c6419f base: make seekbar a thinner version of volume slider
+cf3aaed7aad6 Redesign seekbar
+9fb518a9caa5 Revert "[SQUASH] SystemUI: Clean up unwanted features [1/2]"
+a46f984a63d9 ScrimController: User Tuner API to apply custom alpha
+acddd483fbbe SystemUI: Transparent QS customization
+
+* Repository: /commits/lineage-19.1-caf-sm8250
+
+5250d6bb Revert "gralloc: Fix issue with mmap/munmap meta due to reserved size"
+
+* Repository: https://github.com/Evolution-X/packages_apps_Evolver/commits/refs/heads/snow
+
+18546da363cc EdgeLightning: Update summary to show RGB value instead of ARGB
+db97cce55751 Evolver: EdgeLightning: add visual preview
+9786a18d9488 Evolver: Drop Custom Clocks
+170f784fada3 Add seekbar for Left/Right statusbar Paddings [2/2]
+6f17d3a17d39 Notch friendly carrier label [2/2]
+fd702c058abd Carrier label: Ensure the dialog matches other dialogs
+254fcf8afad5 Set a text length on the carrier label
+6f977659084d Custom Carrier Label & Carrier Label Placement [2/2]
+14e7a30d4cba Evolver: allow hiding lockscreen shortcuts on secure lockscreen [2/2]
+3a1516cc915e Evolver: Add force background freezer
+9a69d28623dd Evolver: Add strict standby policy
+609c1ae5ed70 Revert "Evolver: Cpu overlay: Add CPU info overlay [1/2]"
+f0465cb70b3f Evolver: Introduce Spark & SparkCircle Ls clock
+bd7a37bc60b8 Evolver: Force Expanded Notifications [2/2]
+8c27cea288b6 Evolver: HUN importance selector (2/2)
+9291e3c47148 Evolver: Add lockscreen clock options
+07b3d5549586 Evolver: Add back missing setMax method in CustomSeekBarPreference
+a83cd6568167 Revert "Evolver: Clean up unwanted features [2/2]"
+8976e34bbd62 Evolver: Transparent QS customization [2/2]
+
+* Repository: https://github.com/Evolution-X/packages_apps_Settings/commits/refs/heads/snow
+
+e973a69d0cfa Settings: Comment out feedback bug report preference
+9013185722fa settings: Protect sensitive info on About device
+c516b5c4505c Show only Build ID in about phone
+b2abaa4cffa6 Settings: disable all bugreport settings
+c4b229b65327 Settings: nuke empty category
+121535a068eb Comment out Legal/Regulatory info
+288bb6e3b1d6 Settings: fix dark theme coloring of panels
+77a78efe3e03 Settings: Allow customizing volume dialog timeout [2/2]
+93e55c9cdadd Backup: Don't hardcode ignored backup transports
+3a7cca9bc89c Allow the user to change the BackupTransport
+5a29af9d1ff2 Settings: Adapt xdUI base layout for our needs
+62093fe998b5 Settings: xdUI: Redesign our toolbar
+f5cddf699076 Settings: import xdroid-OSS settings base layout * all credits goes to xdroid-oss
+143a587c8ce0 Settings: Adapt for Custom build
+50921fae48ec Settings: Follow Accent color on search button
+f8477e24e074 Settings: Update battery temp & health strings
+a586a20ef288 security: Add fingerprint wake unlock mode list preference
+37b915fcc1bb BatteryHealth: Make it optional
+86cb3887bf0c BatteryHealth: show Charge Cycles Completed
+717550a4cf77 BatteryHealth: make resources overlayable
+8052dbc45bbf Settings: add BatteryHealth section
+f2d873557e45 Settings: Add preference for TouchGestures
+edb6212eafb8 Create new preview for dark theme
+436e334dd35f Settings: Move Evolver to below connected devices
+d83229de1b15 Settings: PowerUsageSummary: open advanced usage on header click
+2e784cdbb379 Settings: Rearrange and add ordering in battery preferences
+d21efc973a41 Settings: Squash revert battery health
+
+* Repository: https://github.com/Evolution-X/packages_apps_Updates/commits/refs/heads/snow
+
+8e81250d3afb track custom ota updates
+
+* Repository: https://github.com/Evolution-X/packages_modules_Permission/commits/refs/heads/snow
+
+b3a5151df80b PermissionController: blur grant permission dialog
+16350c3e576b PermissionController: Add AndroidSystemBlur dependency
+
+* Repository: https://github.com/Evolution-X/vendor_evolution/commits/refs/heads/snow
+
+56f98fe3aa5c track custom ota updates
+a4a586afda31 overlay: Add ignored backup transport overlay for Settings
+9ebfc1ff2811 Add Settings overlays to enable backup transport selector
+10dcd17613b4 config: Build Seedvault
+2782128ef3d6 config: Enable blur conditionally
+fa3af11921b4 config: Adapt for custom ota
+32405b70ec5a Build TouchGestures
+895d23598964 vendor: Add permissions for lineagehw
+9f44d7cd5669 vendor: Add GoogleSansMedium font
+
+
+=======================
+     2022/08/06
+=======================
+
+* Repository: https://github.com/Evolution-X/build/commits/refs/heads/snow
+
+60a505a7e Merge tag 'android-12.1.0_r20' of https://android.googlesource.com/platform/build into snow
+
+* Repository: https://github.com/Evolution-X/frameworks_base/commits/refs/heads/snow
+
+4f4e17a05544 New Crowdin updates (#310)
+95e97f884758 PixelPropsUtils: Bump to r20 raven build fingerprint
+
+* Repository: https://github.com/Evolution-X/manifest/commits/refs/heads/snow
+
+e7a1723 Merge tag 'android-12.1.0_r20' of https://android.googlesource.com/platform/manifest into snow
+
+* Repository: https://github.com/Evolution-X/packages_apps_Evolver/commits/refs/heads/snow
+
+00421fcea8dd New Crowdin updates (#216)
+
+* Repository: https://github.com/Evolution-X/packages_apps_GameSpace/commits/refs/heads/snow
+
+60a877f New Crowdin updates (#14)
+
+* Repository: https://github.com/Evolution-X/packages_apps_Settings/commits/refs/heads/snow
+
+fce75334cf61 New Crowdin updates (#118)
+
+* Repository: https://github.com/Evolution-X/vendor_evolution/commits/refs/heads/snow
+
+b1694b54ad66 version: Uprev to 6.6.1
+d734e271cd9e apns: Update mobily APN for prepaid connection
+
+
+=======================
+     2022/08/05
+=======================
+
+* Repository: https://github.com/Evolution-X/frameworks_base/commits/refs/heads/snow
+
+471c1592ee65 Revert "Skip checking SystemUI's permission for observing sensor privacy"
+42ed02e1dacb Revert "Fix wakelock under-locked issue"
+f8cf841723cc Write permission synchronization for com.android.systemui.
+2dd4be81d047 SystemUI: VolumeDialogImpl: Fix inactive rows tint
+e5aad2343aa6 core: Add dark mode support for `colorAccentPrimary`
+680f76d3ade2 SettingsLib: Fix user profile photo picker crash
+a56a82212f2f PixelPropsUtils: Hook MusicPlayers for StatusBar Lyric
+8d4aaa5fec50 [SQUASH] SystemUI: Introduce StatusBar Lyric for Android 12L [1/2]
+
+* Repository: https://github.com/LineageOS/android_tools_extract-utils/commits/refs/heads/lineage-19.1
+
+929c9b9 Allow re-using extracted content
+
+* Repository: https://github.com/LineageOS/android_vendor_qcom_opensource_fm-commonsys/commits/refs/heads/lineage-19.1
+
+0565ea9 Automatic translation import
+
+
+=======================
+     2022/08/04
+=======================
+
+* Repository: /commits/lineage-19.1-caf-sm8250
+
+3f0ddc4a Merge tag 'LA.UM.9.12.r1-14400.02-SMxx50.QSSI13.0' of https://git.codelinaro.org/clo/la/platform/hardware/qcom/display into HEAD
+
+* Repository: /commits/lineage-19.1-caf-sm8250
+
+2d5b30a7 Merge tag 'LA.UM.9.12.r1-14400.02-SMxx50.QSSI13.0' of https://git.codelinaro.org/clo/la/platform/hardware/qcom/media into HEAD
+
+
+=======================
+     2022/08/03
+=======================
+
+* Repository: https://github.com/Evolution-X/frameworks_base/commits/refs/heads/snow
+
+4f8d97ec7e31 core: Add telephony stack to allowed service state packages
+ff782b9ee9ef use SharedPreferences to save verify results
+
+* Repository: https://github.com/Evolution-X/manifest/commits/refs/heads/snow
+
+651af95 Manifest for Android 12.1.0 Release 20
+146fb12 Manifest for Android 12.1.0 Release 19
+
+* Repository: https://github.com/Evolution-X/packages_apps_Evolver/commits/refs/heads/snow
+
+d1bf9abf32d6 Evolver: Introduce StatusBar Lyric for Android 12L [2/2]
+3a21f4f69518 Evolver: Remove SystemUI restart prompt for reTicker
+d973aefcc34e Evolver: Added 9 more battery styles [2/2]
+
+* Repository: https://github.com/Evolution-X/packages_apps_GameSpace/commits/refs/heads/snow
+
+684fc5b GameSpace: Fix crash when "Device & app notifications" access is allowed
+
+
+=======================
+     2022/08/02
+=======================
+
+* Repository: https://github.com/Evolution-X/frameworks_base/commits/refs/heads/snow
+
+cf05765e0319 Battery Styles: Added 9 more battery styles [1/2]
+10ac8dfd251b reTicker: Cleanup
+1a666c7048db Use Tuner API for reTicker settings
+c5220632479c AnimatableClockController: Add misans to broken fonts
+915fe54898b6 base: Import Wi-Fi standard icon [1/2]
+325f594e5f6f SystemUI: GlobalActionsDialogLite: switch to AOSP's Flashlightcontroller
+fbeb3649a8d8 Revert "PMS and WMS deadlock when uninstalling APP"
+
+* Repository: https://github.com/Evolution-X/packages_apps_Evolver/commits/refs/heads/snow
+
+5be419d5ed1c Evolver: Import Wi-Fi standard icon [2/2]
+
+* Repository: https://github.com/Evolution-X/packages_apps_Settings/commits/refs/heads/snow
+
+12d93c525643 Settings: default to GlifV3Theme
+886ccfcaa9be Revert "Settings: update SUW theming for 12"
+9050610869ab Settings: convert hotspot timeout preference to a list preference
+
+* Repository: https://github.com/Evolution-X/vendor_evolution/commits/refs/heads/snow
+
+d18b2518338e themes: fonts: misans: overlay light/regular font family
+9abb9b1ba1df themes: fonts: Add misans overlay
+
+
+=======================
+     2022/08/01
+=======================
+
+* Repository: https://github.com/Evolution-X/frameworks_base/commits/refs/heads/snow
+
+1c683a67814d base: Add missing priv-app permissions
+
+
+=======================
+     2022/07/31
+=======================
+
+
+=======================
+     2022/07/30
+=======================
+
+* Repository: https://github.com/Evolution-X/frameworks_base/commits/refs/heads/snow
+
+a660c0c25c84 SystemUI: VolumeDialogImpl: Change bg tint for inactive rows
+
+
+=======================
+     2022/07/29
+=======================
+
+* Repository: https://github.com/Evolution-X/frameworks_base/commits/refs/heads/snow
+
+b2b398a83506 SystemUI: Respect Statusbar left padding in keyguard carrier
+c3bb95b666f6 Revert "SystemUI: respect statusbar left padding in QS clock & keyguard carrier"
+cf99d1ff2e95 BatteryService: Switch Warp charging status path to an overlay
+c1d37dce158a SystemUI: Fix QS expand lag when VoLTE/VoWiFi icons are enabled
+
+
+=======================
+     2022/07/28
+=======================
+
+* Repository: https://github.com/Evolution-X/frameworks_base/commits/refs/heads/snow
+
+07edd5f7b9b5 Update battery info every second when device is charging
+dffd4fa7f81f LockscreenCharging: Add divisor current overlay
+
+* Repository: /commits/lineage-19.1-caf-sm8250
+
+b30a9f11 Merge tag 'LA.UM.9.12.r1-14400-SMxx50.QSSI12.0' of https://git.codelinaro.org/clo/la/platform/hardware/qcom/audio into HEAD
+
+* Repository: /commits/lineage-19.1-caf-sm8250
+
+74a144c9 Merge tag 'LA.UM.9.12.r1-14400-SMxx50.QSSI12.0' of https://git.codelinaro.org/clo/la/platform/hardware/qcom/display into HEAD
+f172e665 gralloc: describe layout for P010 & VENUS P010
+0ab3a852 gralloc: Fix P010 format layout
+233cf7fc Gralloc:: Add error handing for meta decoding.
+
+* Repository: /commits/lineage-19.1-caf-sm8250
+
+662ca004 conf_files: kona: Tune FPS in perf xml
+
+
+=======================
+     2022/07/27
+=======================
+
+* Repository: https://github.com/Evolution-X/frameworks_base/commits/refs/heads/snow
+
+c059547d957a LockscreenCharging: Calculate power from voltage and current
+1f177fae1dd3 SystemUI: Fix current formatting on lockscreen
+6152666a2f0c Revert "SystemUI: Add current divider config for lockscreen charging"
+7a489bb9741b SystemUI: respect statusbar left padding in QS clock & keyguard carrier
+d3e9435f2e59 PackageManagerService: Load APKs from system_ext/framework
+67011edcc572 permissions: Grant `ACCESS_FINE_LOCATION` to broadcast receiver intents
+3a90de2db6b4 permissions: Update cellbroadcastreceiver allowlist
+f9ca62d569ef SystemUI: Secondary color for lockscreen clock toggle [1/2]
+0d2ecea9e2bd add missing display cutout overlays
+
+* Repository: https://github.com/Evolution-X/packages_apps_Evolver/commits/refs/heads/snow
+
+96fbcb5ae51d Evolver: Secondary color for lockscreen clock toggle [2/2]
+
+* Repository: https://github.com/Evolution-X/packages_apps_GameSpace/commits/refs/heads/snow
+
+2953222 New Crowdin updates (#13)
+
+* Repository: https://github.com/Evolution-X/packages_apps_Settings/commits/refs/heads/snow
+
+81f2e25168dc AdbRootPreferenceController: Set `isAvailable()` to true
+
+* Repository: https://github.com/Evolution-X/packages_modules_Connectivity/commits/refs/heads/snow
+
+edf0010e0 setUidsAllowedOnRestrictedNetworks: Modify UID enforcement to check app id
+8435aec9b DnsUtils: Use Cloudflare DNS instead of Google DNS
+9da19a619 NetworkDiagnostics: Use Cloudflare DNS instead of Google DNS
+939797214 Tethering: Use Cloudflare DNS instead of Google DNS
+58bec5980 Add AdGuard DNS as a private DNS provider
+3b601cecd Add Cloudflare DNS as a private DNS provider
+8ecc56008 Remove DUN requirement for tethering
+5aba1ed76 Connectivity: Add capability to allow tethering to use VPN upstreams [2/3]
+
+* Repository: https://github.com/Evolution-X/vendor_evolution/commits/refs/heads/snow
+
+90443369ef52 themes: fonts: Import Oppo Sans
+
+
+=======================
+     2022/07/26
+=======================
+
+* Repository: https://github.com/Evolution-X/frameworks_base/commits/refs/heads/snow
+
+3a14cfd85cfe NetworkPolicyManagerService: turn this into just a warning
+dd7692724999 overlays: Add notchbar killer for left-notch devices
+c961173b087b overlays: Add notch bar killer
+3e1f8a54083c Turn off carrier provisioning by default to allow tethering
+0fbfb63bbea5 Revert "Remove fixed grant of READ_PHONE_STATE and cleanup"
+ed09f02a2d11 LayoutInflater: remove less frequently used apps
+bbd5aef24009 GameSpace: Fix issue with multiple users
+c50882933a2b [REPICK] SettingsProvider: Handle WRITE_DEVICE_CONFIG permission denial for gms
+fa2ee1570b0a reTicker: Do not show when content/icon is null
+44656d839a14 base: Force fullscreen for Google Dialer
+ef00800784d8 base: Allow to skip confirmation in biometric auth dialog [1/2]
+4d26385ebaed SystemUI: Remove user setup check for alarm icon
+4b992f6d5a9a SystemUI: Grant INTERACT_ACROSS_USERS_FULL permission for smartspace
+a98b425b61b4 KernelCpuUidActiveTimeReader: Do not spam log with negative active time
+dd836bfd4194 PixelPropsUtils: Fix issue with text select and copy
+
+* Repository: https://github.com/Evolution-X/packages_apps_GameSpace/commits/refs/heads/snow
+
+8d75f95 GameSpace: Fix inconsistencies for multi-user usage
+
+* Repository: https://github.com/Evolution-X/packages_apps_Settings/commits/refs/heads/snow
+
+7fc60624434c Battery: Add summary to some preferences
+f0f97f018055 Settings: Add a preference to battery optimization page
+8c7fbd9e3c77 Settings: Move Notch Cutout to Display
+f28675753380 Settings: Allow to skip confirmation in biometric auth dialog [2/2]
+3655f7f4ed8e Battery: Show unavailable instead of 0.0℃ for battery temp
+6aa6666d513a development: Enable force resizable activities by default
+d595c62820d2 development: Enable freeform windows by default
+
+* Repository: https://github.com/Evolution-X/vendor_evolution/commits/refs/heads/snow
+
+26941c32892f config: Drop unnecessary permissions whitelist
+
+
+=======================
+     2022/07/25
+=======================
+
+
