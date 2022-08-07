@@ -1,0 +1,4 @@
+* Define proximity sensor type with custom threshold
+* Revert "sm8250-common: Rootdir: Move thermal profiles permissions to init
+* Revert "base: Remove keyguard delay completely"
+* allow luminance value to go low as 0
