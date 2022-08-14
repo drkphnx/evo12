@@ -1,0 +1,290 @@
+
+
+Device Chnagelogs 
+
+- Added 1+ Dolby (thnaks to Johnmart)
+- Complete rework on tree 
+- Fix memory parameters for non-QCOM targets
+- rootdir: Replace writepid with task_profiles command
+- sepolicy: label /proc/sys/vm/rswappiness
+- Move back to usual HIDL version of memtrack 
+- Update Powerhint
+- Nuke iorapd 
+- Update Blobs to 13.0.7.0 EU
+- Define Qs-offset and Qs-Footer height
+- audio: Define acdb ids for voice recorder
+- Use DMIC instead of UNPROCESSED for recorder
+
+
+
+** Note Clean flash mandatory if comming from 7/8/22 build **
+
+
+Rom Downloadlink incase you want to update manually or updater failed to update or in anyother unplanned event
+https://drive.google.com/file/d/15aB-Mi-Hkt6VOqLAtytG-Wnbo0V10kcd/view?usp=sharing
+
+
+Source Changelogs (Custom changes + base source chnages) 
+=======================
+     2022/08/14
+=======================
+
+fcddd50437d0 [1/2] Clock: Add ability to resize QS & Statusbar Clock
+2b1e5367ef1e VolumeDialog: Change icon for output settings
+4f512eba3c5d SystemUI: Add LockScreen custom clocks
+70e29e878d93 Revert "Fix brightness slider curve for some devices"
+fc5fa3f2b579 FPSInfoService: Revamp FPS counter
+a9334b0f3e9b Increase blur radius to 75 and Make blur crossfading more gradual The default value for blur crossfading results in a sudden jump from sharp to blurred.
+ecfb6b630f39 base: log spill when dragging
+b1b6f7a88746 SystemUI: Disable blur wakeup animation
+177a19a5f2c0 Skip checking SystemUI's permission for observing sensor privacy
+506e2112a5b5 Fix NPE in WakeLock#finalize for unit test
+c4088b81d0ea Provide gesture and tappable element insets for caption
+a1f8c7bdd13f EntropyMixer: ensure new seed file is as good as old one
+87e739eeb0b6 Use CopyOnWriteArrayList for mGroupDevices
+7ae229060bb4 Fix wakelock under-locked issue
+31060da3d1fc NfcA: Fix an NPE in constructor
+e19250794b0b Consolidate clearing mImeInsetsFrozenUntilStartInput
+e2cddd0c15db Decode the input of both setStream and setResource calls first
+4db202a36ebf Bad lock object.
+075f05d22267 Fix JobStoreTest after adding defensive copy to NetworkRequest.Builder
+03c587096ff7 Delete skipCallbacks when Exception dispatchInputEvent beacuse calling finishInputEvent twice will cause 'Native Crash'
+00334549caaa Fix MtpDatabase multithreading NullPointerException
+23bdf05ad5b0 AuthRippleController: Always finish the LightRevealScrim
+841d3cf1f590 AuthRippleController: Only update sensor location when necessary
+6b245401ac43 display: Force a reset if brightness adjustment is changed directly
+3176b5040a31 display: Don't reset brightness adjustment on clearUserDataPoints()
+55d1cdcfdad0 display: Don't let "extra dim" affect brightness adjustment
+7ea3109a29d7 Immediately notify VM of TOP process state
+1d0e54d8b415 Clear BCB if space allocation failed
+2fbf9b4a9c57 ParcelableHolder: assert stability on read
+6004db736e25 Store pending override config instead of creating ActivityClientRecord
+f04a2976c9c2 Properly fix revokePermissionsNoLongerImplicitLocked() for shared UIDs.
+23489dbc6d38 Block animation transfer after surface animation finishes.
+83add2786d8d Fix content insets calculation error when taking task snapshot.
+bfa4a6d8d54d AudioService: PlaybackActivityMonitor: fix exploding list
+c435893c3c41 SystemUI: Set custom scrim alpha in ScrimState
+f5895503f1c2 UserDataPreparer: only delete contents of user's system CE and DE dirs
+e86feb4ff5aa UsageStatsService: don't create stuff directly in /data/system_de
+1e71f5acc922 bit: avoid calling strdup(NULL)
+a990e0df0030 Fix nanosleep in BootAnimation
+ff673a0026b6 Make DPC respect overlaid min/max brightness values
+f9d00093486e Fix potential race condition due to missing lock
+85c3890a2b81 Fix bug in Blend that did not use options.
+d39e3af7bea3 Avoid repeated loading of mutable runtime overlays in the form of sharedLib
+994e68150988 ResolveActivity scroll not Smooth
+81baaf526e28 Catch IllegalStateException to avoid reboot
+b05d0e0358a7 Avoid setting unnecessary display state when booting.
+f0e6ca87f094 Fix the NullPointerException in Android S Version:mServicesData
+729c8db12cbf Fixes layer leak if window removed during fade animation
+46d0da9eba3a Add null check for RemoteAnimationController#onAnimationFinished
+0d1417db37d1 MediaCodec: don't cache buffers until requested
+bbcb78b27d87 Call isServiceTokenValidLocked with lock.
+1ca31fe3a836 Allow apps receiving MediaSession callbacks to start FGS from BG.
+2ff3e611f641 Fix getRootTask may be null led to client NPE
+cbc7002a94b0 Pixel Navbar animation toggle [1/2]
+ddb9d2880736 SystemUI: Use stripped down version of OpaLayout
+53b87b72dd97 base: Unlock keystore with fingerprint after reboot (1/2)
+1e9e9acb554a SystemUI: blur auth dialog background
+ac220379b85a Use accent color for privacy indicators
+c05c0699a19b Keyguard: Apply color accent to shorcuts
+05f3ed74f11d Keyguard shortcuts: Follow light/dark settings
+b697e390636e Redesign lockscreen bottom shortcuts
+016ff08979d9 SystemUI: Set proper margin and padding for lockscreen bottom shortcuts
+56c760b33db7 Battery: make fill path rounded
+cbf0ce8aa425 StrictStandby: Offload force stop onto lock-free context
+86d0bf83225f SystemUI: Add seekbar for Left/Right statusbar Paddings [1/2]
+d0d5503ec792 Properly handle View Visibility for carrierlabel & left clock
+8426fb747582 Carrier Label: Bring back the scroll (marquee) effect
+5dd165a04b2c Notch friendly carrier label [1/2]
+b3307858f484 Custom Carrier Label & Carrier Label Placement [1/2]
+a342ed16ca62 base: Allow customizing volume dialog timeout [1/2]
+34b1c38b0251 SystemUI: LS Hide Shortcut must hide all shortcuts not just defaults
+bcd9d7172d7a base: allow hiding lockscreen shortcuts on secure lockscreen [1/2]
+0d4e547e5389 SystemUI: Add dual-tone light and dark themes for QS
+62fe7c9af856 SystemUI: Initialize QS tiles in inactive state
+b8cc181c7f54 SystemUI: Follow light/dark theme in quick settings
+605a8b39f6eb Revert "Do not re-inflate QS and SB when CONFIG_UI_MODE"
+33ff884a1a8c SystemUI: Make QS panel change on UI mode changes
+2871d5c41765 Volume Panel: Fix spacing and media output picker view
+bf5ffb86c5e6 SystemUI: Move ringer drawer above volume rows
+58b1fa0f2fc7 SystemUI: Improve Per-app volume icon view
+be1beb9c2e67 SystemUI: Improve live captions button style
+1f017ea93dde SystemUI: Improve volumepanel buttons style
+2b0d501398b4 SystemUI: Volume panel layout changes
+096096ac504d SystemUI: Redesign Volume Panel the 404 way
+cb91965376d8 VolumePanel: Improve volume panel percent view
+43ca5d3246c8 VolumePanel: Fix expand animation for left volume panel
+5f090261ee60 VolumePanel: Design changes
+0ab70a1b060f Open Sound settings on long click at the panel button
+6fb16f33599a VolumeDialog: Clean up unused dynamic in addRow
+973bdb7f2cea SystemUI: Remove shadows from elements like clock, charging etc on lockscreen. It doesn't fit well and makes clock font look distorted.
+aca2ce93a625 base: Introduce force background freezer
+e2ca397effa5 base: Add support for strict standby policy
+1c273f5aaaed SystemUI: use AndroidSystemBlur-platform
+71da66c48203 SystemUI: blur brightness slider dialog
+e03429ae4364 GlobalActionsDialogLite: disable SystemUIDialog provided blur
+755102a4895f SystemUIDialog: allow disabling background blur
+a2e9b948f81a DndTile: disable dialog animation
+9c032b1dd34b DataSaverTile: disable dialog animation
+0b2ccb3c3088 MediaControlPanel: disable dialog animation
+9bd57694fcd1 MediaOutputController: disable dialog animation
+88b36a0654ab UserSwitchDialogController: disable dialog animation
+d1c9ff70f7c1 SystemUIDialog: blur background
+e5908bb93ff2 ScreenRecordTile: disable dialog animation
+57a0d705b12d InternetTile: disable dialog animation
+352e6450dbdf FooterActionsController: disable power menu animation
+417152f8f764 SystemUI: blur privacy dialog
+8e7d51785916 SystemUI: blur global actions dialog
+fa76e4872125 SystemUI: blur toast
+070b1a45512e SystemUI: Add AndroidSystemBlur dependency
+b2ea0da230ad PixelPropsUtils: Fix HDR support spoof
+4bb6eec507b0 fwb: Bring in the new icon
+ee6ee2af8e83 Force Expanded Notifications [1/2]
+4b33d23bce93 Move binder latency data logging to a background thread to improve performance of the main thread.
+428cfe9e18b8 Fix the wrong of dismisssurface state under multi-threading
+302939b20023 EasterEgg: Fix some warnings
+5b7bda1662fa Handle BLE ON corner use cases with BLE APP concurrency
+f52334f7cb1e Fix StageCoordinator unexpected onDisplayAreaVanished
+495eb741277e base: HUN importance selector (1/2)
+fa8e71cd6222 Properly handle wrap system property in zygote
+c68608cc8fb3 Correct off-by-one error in SetThreadName
+6c8642c8099d Revert "Revert "Separate mute and vibrate icons in status bar""
+a78fb1ce9732 SystemUI: Implement SparkCircle Clock
+903908f45483 Custom Clocks: Adapt for 12L
+5676dfc41070 SystemUI: Fix smartspace weather layout
+e41592558208 Implement Spark Ls Clock Style
+876e5ab2d64f Further Improve the Clock impl
+7017e7840064 Introduce Custom Clock Support
+aa4712330497 TouchGestures: Add keyhandler overlays
+cec38a09c659 base: Show USB icon in ADB notification
+5222dc11f81c Fix brightness slider curve for some devices
+1c41768963d1 Add bootloader option to 'Reboot' tile
+2a01d3705304 AppErrorDialog: add option to disable pkg
+bde9d03bee1e LockscreenShortcuts: enable default shortcuts
+cd92118097a5 core: Update GPS Icons to be more Material
+93cb779699a2 SystemUI: Dismiss existing screenshot window on taking new screenshot
+5a8bde717e7f SystemUI: Dismiss screenshot window on touch outside
+9da07aeb5a6b base: make seekbar a thinner version of volume slider
+7ef15d18f5e4 Redesign seekbar
+d2cb9b3c4bbe Lockscreen timeout: Make timeout configurable [1/2]
+6507aaad93b0 NotificationMediaManager: Increase blur radius for blur media filters
+6ebabfb9c742 SystemUI: Switch notification background to monet on heads up
+686e1e360305 SystemUI: match brightness slider track height with the progress drawable
+700b242e4946 SystemUI: Set custom scrim alpha in ScrimState
+e22f73e11b2f ScrimController: User Tuner API to apply custom alpha
+2404f6386208 SystemUI: Transparent QS customization
+ccf5c4aa10b8 Only allow the system server to connect to sync adapters
+116a7cfcf1ae Stop using invalid URL to prevent unexpected crash
+903986cdd18c Remove package title from notification access confirmation intent
+649a594652f0 Make CheckOp return allowed if any attr tag for a package is excluded
+679e8d2389e4 Allow system server uid to bypass location restriction
+03054d428a5e Disallow privileged apps to bypass location restriction
+f0ca787be694 DO NOT MERGE. Add a permissions check to LocationManagerService.
+7ad77e417845 Clear mInterface before calling resetIkeState()
+86de76ae9480 Make sure callingPackage belongs to callingUid when checking BG-FGS restrictions.
+bedd9ad54815 DO NOT MERGE Suppress notifications when device enter lockdown
+643f717e408e Allow shell uid without checking the package name.
+9ff2006aa7d3 Allow apps receiving MediaSession callbacks to start FGS from BG.
+cab77062a4a3 Set default value of config_supportsScreenOffUdfps to false
+e76171786c99 KeyguardUpdateMonitor: Destroy our settings observer when necessary
+b8a37e3ed7ad DeviceInfoUtils: Read `org.evolution.build_security_patch` for security patch
+7808456502ad Screenrecord: Allow to select AVC codec profile level
+60f1895a8945 Status bar: Update notification count overlay
+4852a2319f61 Status bar: Update notification count icons
+536dd479f3e5 SystemUI: Refactor colored statusbar icons
+6f7be2646375 SystemUI: Refactor notification counter
+d8bc9dff09d6 Show infinity for large notification counts
+70b7f144e9fd SystemUI: Forward-port notification counters [1/2]
+b00618c73451 Make colored Statusbar Icons optional [1/2]
+dc5618ba9c36 StatusBarIconView: use app icons instead of provided notif one
+3ef59c3b5fc7 SystemUI: Fixes/Improvements for QS tiles count settings
+9f9f0064a44c SystemUI: Cleanup QS tile count settings
+f03d5bc11dfa SystemUI: Fix qs customizer corner radius
+ba96d9cf5a82 SystemUI: Reduce qs tile padding
+48f9e10a6b93 TileAdapter: Report 3 columns for qs customizer
+4312b12b8132 SystemUI: Fix wrong context for mNumColumns
+8a95a15f74c4 SystemUI: Adapt DotOs qs tile changes for qs tile count settings
+51b96e5edbe9 QS tile count settings: Fixes and improvements for landscape settings
+51f8ad64ef16 SystemUI: QS tile count settings code fixup
+160a26be9840 SystemUI: Increase QS tile corner radius
+7e0a6e6701b6 SystemUI: Improve QS tile count settings
+9cd141b42740 SystemUI: Refactor qs tile count settings
+ffd7e22df033 SystemUI: Fix qs tile vertical layout scrolling
+ffa9761d0d87 [1/2] SystemUI: qs hide label setting
+56769dcdeb39 [1/2] SystemUI: qs columns count settings
+db1ffae903dc SystemUI: add OmniSettingService Hooks
+80c3c78a1d4a SystemUI: Show the ripple on face auth if skip lockscreen enabled
+a4b43aa26e52 SystemUI: Implement sleep for pickup gesture
+7b064b016d2a SystemUI: Remove trace counter from ScrimState
+29e957310974 Set navbar color for device default settings theme
+d4d511e7ab05 SettingsLib: Fix nav bar color on certain apps
+d8cd8fe383e3 SettingsLib: Fix user profile photo picker crash
+a17326840c1a core: Add telephony stack to allowed service state packages
+80f3be7f187c PixelPropsUtils: Bump to r22 raven build fingerprint
+27018c8fbbfb CameraManager: Make the workaround completely optional
+3447a797b189 AnimatableClockController: Sync with fonts overlay changes
+bbd72d9ec07b IllustrationPreference: Hide illustration when we fail to play anim
+b14d209a2eef Keyguard: Allow user configurable fingerprint wake-and-unlock
+fb168a55a458 Write permission synchronization for com.android.systemui.
+eeb1a48370bd use SharedPreferences to save verify results
+
+
+
+
+6424299919 blur: Reduce max cross fade radius for OpenGL
+8d8a6da550 blur: skia: Switch to Glass blur effect
+b4b1eb1b34 skia: blur: Downscale source FBO to 20% size
+46fab26549 blur: Downscale source FBO to 20% size
+f3a1640bd4 blur: Limit blur to the two frontmost layers
+5f77bacf41 blur: Invalidate newly-bound framebuffers before rendering
+1e3bb713db blur: Calculate vertices in vertex shader instead of using VBO
+8d401f74c2 blur: Interpolate tap UV coordinates in vertex shader
+6cb383399e blur: Reduce floating-point precision for UV coordinates
+86998f5f5d blur: Downscale image before blurring
+8b90ab5192 blur: Only set constant shader uniforms once
+f38791fa4d blur: Dither output using triangular RGB blue noise
+d6ce698cef blur: Skip processing of alpha channel by swizzling RGB
+a3d4e8e773 blur: Improve terminology used in mix shader
+
+
+e25c557c3dc3 Evolver: Drop CPU info overlay toggle
+47eedce09e9a NavbarSettings: Add dependency on navbar visibility for pixel animation pref.
+8b339d804e21 Evolver: Lock pixel animation pref if gestural mode is active.
+e56168914dba Monnet: allow luminance value to go low as 0 alternative to black theme , turning on black theme removes dual tone on QS pannel using luminance to 0 with linear lightness keeps dual tone and looks more good
+2fc39016ff98 EdgeLightning: Update summary to show RGB value instead of ARGB
+04658900fa5b Evolver: EdgeLightning: add visual preview
+2106ce65f90e Add seekbar for Left/Right statusbar Paddings [2/2]
+0588898ed997 Notch friendly carrier label [2/2]
+7550a4d73659 Carrier label: Ensure the dialog matches other dialogs
+d5719664c7e6 Set a text length on the carrier label
+66c578ac2c80 Custom Carrier Label & Carrier Label Placement [2/2]
+96cfc25dc6f2 Evolver: allow hiding lockscreen shortcuts on secure lockscreen [2/2]
+d3952a673cf6 Evolver: Add force background freezer
+c7e8970f654a Evolver: Add strict standby policy
+36384b5423aa Evolver: Introduce Spark & SparkCircle Ls clock
+fe3c61caaf36 Evolver: Force Expanded Notifications [2/2]
+ced9018a30cb Evolver: HUN importance selector (2/2)
+f1fb093c9757 Evolver: Add lockscreen clock options
+bbc0399acc58 Evolver: Add back missing setMax method in CustomSeekBarPreference
+cec00f77c93f Evolver: Transparent QS customization
+83af74c399c8 Evolver: Bring back lockscreen media art blur filters
+
+
+d8c0f7698a89 Smart Cutoff: Adjust master switch strings for new MainSwitchPreferences
+ad98105e5e8e Settings: Improve protected sensitive info in about phone
+85812b2eacf9 Settings: Make phone number clickable
+a35a1c406136 settings: Protect sensitive info on About device
+473c836fdba6 Settings: fix dark theme coloring of panels
+c09b09bfb3cf Backup: Don't hardcode ignored backup transports
+9a7f5a64ba71 Allow the user to change the BackupTransport
+a9aaba4a2bd5 Settings: Adapt xdUI base layout for our needs
+32d7e9be824b Settings: xdUI: Redesign our toolbar
+c3db942e57b4 Settings: import xdroid-OSS settings base layout * all credits goes to xdroid-oss
+df634cd0ec1a Settings: Adapt for Custom build
+54b70fcb8728 Settings: Follow Accent color on search button
+b1fc16ff95b1 vendor: Add GoogleSansMedium font
+
+
+
+
